@@ -181,10 +181,9 @@ export default function SignIn() {
           }}
         >
           <Button
-            onClick={() => navigate("/")}
+            onClick={() => navigate(-1)}
             startIcon={<ArrowBackRoundedIcon />}
             component="a"
-            href="/material-ui/getting-started/templates/"
           >
             Back
           </Button>
@@ -276,7 +275,7 @@ export default function SignIn() {
                 Sign in
               </Button>
               <Link
-                href="/material-ui/getting-started/templates/sign-up/"
+                href="/sign-up"
                 variant="body2"
                 sx={{ alignSelf: "center" }}
               >

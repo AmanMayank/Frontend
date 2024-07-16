@@ -10,6 +10,7 @@ import Typography from "@mui/material/Typography";
 
 import { visuallyHidden } from "@mui/utils";
 import { styled } from "@mui/material/styles";
+import { useNavigate } from "react-router-dom";
 
 const StyledBox = styled("div")(({ theme }) => ({
   alignSelf: "center",
@@ -34,6 +35,7 @@ const StyledBox = styled("div")(({ theme }) => ({
 }));
 
 export default function Hero() {
+  const navigate = useNavigate();
   return (
     <Box
       id="hero"
@@ -120,7 +122,11 @@ export default function Hero() {
                 },
               }}
             />
-            <Button variant="contained" color="primary">
+            <Button
+              onClick={() => navigate("/sign-up")}
+              variant="contained"
+              color="primary"
+            >
               Start now
             </Button>
           </Stack>

@@ -45,6 +45,10 @@ function AppAppBar({ mode, toggleColorMode }) {
     navigate("/sign-in");
   };
 
+  const handleSignUp = () => {
+    navigate("/sign-up");
+  };
+
   return (
     <AppBar
       position="fixed"
@@ -142,7 +146,12 @@ function AppAppBar({ mode, toggleColorMode }) {
             >
               Sign in
             </Button>
-            <Button color="primary" variant="contained" size="small">
+            <Button
+              onClick={handleSignUp}
+              color="primary"
+              variant="contained"
+              size="small"
+            >
               Sign up
             </Button>
           </Box>
@@ -182,7 +191,12 @@ function AppAppBar({ mode, toggleColorMode }) {
                 </MenuItem>
                 <MenuItem onClick={() => scrollToSection("faq")}>FAQ</MenuItem>
                 <MenuItem>
-                  <Button color="primary" variant="contained" fullWidth>
+                  <Button
+                    onClick={handleSignUp}
+                    color="primary"
+                    variant="contained"
+                    fullWidth
+                  >
                     Sign up
                   </Button>
                 </MenuItem>
